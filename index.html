@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="black" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+          </svg>
+      <button type="button" class="go-to-main-btn">
+            Повернутися на головну
+      </button>
+      <h3 class="logo">FindMall</h3>
+      <form>
+        <label>
+            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="black" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            <input
+            type="text"
+            name="name-search"
+            placeholder="Пошук за назвою"
+            class="search-input"
+        /></label>
+      </form>
+    </header>
+    <main>
+      <section class="results">
+        <h2 class="results-title">Результати пошуку</h2>
+      </section>
+      <section class="main-section">
+        <div class="categories-forms">
+          <p class="form-title">ТРЦ:</p>
+          <form>
+            <input
+                type="checkbox"
+                name="mall-name"
+                value="victoria-gardens"
+                class="category-checkbox visually-hidden"
+                id="victoria-gardens"/>
+            <label class="category-label" for="victoria-gardens">Victoria Gardens</label>
+            
+            <input
+                type="checkbox"
+                name="mall-name"
+                value="king-kross-leopolis"
+                class="category-checkbox visually-hidden"
+                id="king-kross"
+              />
+            <label class="category-label" for="king-kross">King Kross Leopolis</label>
+
+            <input
+                type="checkbox"
+                name="mall-name"
+                value="spartak"
+                class="category-checkbox visually-hidden"
+                id="spartak"
+            />
+            <label class="category-label" for="spartak">Spartak</label>
+            
+            <input
+                type="checkbox"
+                name="mall-name"
+                value="forum-lviv"
+                class="category-checkbox visually-hidden"
+                id="forum"
+            />
+            <label class="category-label" for="forum">Forum Lviv</label>
+            
+          </form>
+          <p class="form-title">Магазини:</p>
+          <form>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="clothes-shoes"
+                class="category-checkbox visually-hidden"
+                id="clothes-shoes"
+            />
+            <label class="category-label" for="clothes-shoes">
+              Одяг та взуття
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="lingerie"
+                class="category-checkbox visually-hidden"
+                id="lingerie"
+              />
+            <label class="category-label" for="lingerie">
+              
+              Спідня білизна
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="accessories"
+                class="category-checkbox visually-hidden"
+                id="accessories"
+              />
+            <label class="category-label" for="accessories">
+              
+              Аксесуари
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="sport-goods"
+                class="category-checkbox visually-hidden"
+                id="sport-goods"
+              />
+            <label class="category-label" for="sport-goods">
+              
+              Спортивні товари
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="pet-goods"
+                class="category-checkbox visually-hidden"
+                id="pet-goods"
+              />
+            <label class="category-label" for="pet-goods">
+              
+              Товари для тварин
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="beauty-health"
+                class="category-checkbox visually-hidden"
+                id="beauty-health"
+              />
+            <label class="category-label" for="beauty-health">
+              
+              Краса та здоров’я
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="children-goods"
+                class="category-checkbox visually-hidden"
+                id="children-goods"
+              />
+            <label class="category-label" for="children-goods">
+              
+              Товари для дітей
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="presents-home-art"
+                class="category-checkbox visually-hidden"
+                id="presents-home-art"
+              />
+            <label class="category-label" for="presents-home-art">
+              
+              Подарунки, дім та <br>творчість
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="optics"
+                class="category-checkbox visually-hidden"
+                id="optics"
+              />
+            <label class="category-label" for="optics">
+              
+              Оптика
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="jewelry"
+                class="category-checkbox visually-hidden"
+                id="jewelry"
+              />
+            <label class="category-label" for="jewelry">
+              
+              Ювелірні вироби
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="supermarkets-food"
+                class="category-checkbox visually-hidden"
+                id="supermarkets-food"
+              />
+            <label class="category-label" for="supermarkets-food">
+              
+              Супермаркети та <br>харчування
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="drinks-tobacco"
+                class="category-checkbox visually-hidden"
+                id="drinks-tobacco"
+              />
+            <label class="category-label" for="drinks-tobacco">
+              
+              Напої та тютюн
+            </label>
+            <input
+                type="checkbox"
+                name="shop-category"
+                value="electronics-machinery"
+                class="category-checkbox visually-hidden"
+                id="electronics-machinery"
+              />
+            <label class="category-label" for="electronics-machinery">
+              
+              Електроніка, <br>техніка та зв’язок
+            </label>
+          </form>
+          <p class="form-title">Кафе та<br />ресторани:</p>
+          <form>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="cafe"
+                class="category-checkbox visually-hidden"
+                id="cafe"
+              />
+            <label class="category-label" for="cafe">
+              
+              Кав’ярня
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="bakery"
+                class="category-checkbox visually-hidden"
+                id="bakery"
+              />
+            <label class="category-label" for="bakery">
+              
+              Пекарня
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="pizzeria"
+                class="category-checkbox visually-hidden"
+                id="pizzeria"
+              />
+            <label class="category-label" for="pizzeria">
+              
+              Піцерія
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="burger"
+                class="category-checkbox visually-hidden"
+                id="burger"
+              />
+            <label class="category-label" for="burger">
+              
+              Бургерна
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="healthy-eating"
+                class="category-checkbox visually-hidden"
+                id="healthy-eating"
+              />
+            <label class="category-label" for="healthy-eating">
+              
+              Здорове харчування
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="interactive-cafe"
+                class="category-checkbox visually-hidden"
+                id="interactive-cafe"
+              />
+            <label class="category-label" for="interactive-cafe">
+              
+              Інтерактивне кафе
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="icecream-yogurt"
+                class="category-checkbox visually-hidden"
+                id="icecream-yogurt"
+              />
+            <label class="category-label" for="icecream-yogurt">
+              
+              Морозиво/йогуртерія
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="ukrainian-food"
+                class="category-checkbox visually-hidden"
+                id="ukrainian-food"
+              />
+            <label class="category-label" for="ukrainian-food">
+              
+              Українська кухня
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="european-food"
+                class="category-checkbox visually-hidden"
+                id="european-food"
+              />
+            <label class="category-label" for="european-food">
+              
+              Європейська кухня
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="asian-food"
+                class="category-checkbox visually-hidden"
+                id="asian-food"
+              />
+            <label class="category-label" for="asian-food">
+              
+              Азійська кухня
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="fastfood"
+                class="category-checkbox visually-hidden"
+                id="fastfood"
+              />
+            <label class="category-label" for="fastfood">
+              
+              Фастфуд
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="georgian-food"
+                class="category-checkbox visually-hidden"
+                id="georgian-food"
+              />
+            <label class="category-label" for="georgian-food">
+              
+              Грузинська кухня
+            </label>
+            <input
+                type="checkbox"
+                name="cafe-restaurants"
+                value="delivery"
+                class="category-checkbox visually-hidden"
+                id="delivery"
+              />
+            <label class="category-label" for="delivery">
+              
+              Доставка
+            </label>
+          </form>
+          <p class="form-title">Розваги та<br />послуги:</p>
+          <form>
+            <input
+                type="checkbox"
+                name="entertainment-services"
+                value="coworking"
+                class="category-checkbox visually-hidden"
+                id="coworking"
+              />
+            <label class="category-label" for="coworking">
+              
+              Коворкінг
+            </label>
+            <input
+                type="checkbox"
+                name="entertainment-services"
+                value="sport-club"
+                class="category-checkbox visually-hidden"
+                id="sport-club"
+              />
+            <label class="category-label" for="sport-club">
+              
+              Спортивний зал
+            </label>
+            <input
+                type="checkbox"
+                name="entertainment-services"
+                value="dry-cleaning"
+                class="category-checkbox visually-hidden"
+                id="dry-cleaning"
+              />
+            <label class="category-label" for="dry-cleaning">
+              
+              Хімчистка
+            </label>
+            <input
+                type="checkbox"
+                name="entertainment-services"
+                value="cinema"
+                class="category-checkbox visually-hidden"
+                id="cinema"
+              />
+            <label class="category-label" for="cinema">
+              
+              Кінотеатр
+            </label>
+            <input
+                type="checkbox"
+                name="entertainment-services"
+                value="bowling"
+                class="category-checkbox visually-hidden"
+                id="bowling"
+              />
+            <label class="category-label" for="bowling">
+              
+              Боулінг
+            </label>
+            <input
+                type="checkbox"
+                name="entertainment-services"
+                value="beauty-studio"
+                class="category-checkbox visually-hidden"
+                id="beauty-studio"
+              />
+            <label class="category-label" for="beauty-studio">
+              
+              Студія краси
+            </label>
+            <input
+                type="checkbox"
+                name="entertainment-services"
+                value="post-office"
+                class="category-checkbox visually-hidden"
+                id="post-office"
+              />
+            <label class="category-label" for="post-office">
+              
+              Поштове відділення
+            </label>
+            <input
+                type="checkbox"
+                name="entertainment-services"
+                value="tourist-services"
+                class="category-checkbox visually-hidden"
+                id="tourist-services"
+              />
+            <label class="category-label" for="tourist-services">
+              
+              Туристичні послуги
+            </label>
+            <input
+                type="checkbox"
+                name="entertainment-services"
+                value="entertainment"
+                class="category-checkbox visually-hidden"
+                id="entertainment"
+              />
+            <label class="category-label" for="entertainment">
+              
+              Розваги
+            </label>
+            <input
+                type="checkbox"
+                name="entertainment-services"
+                value="services"
+                class="category-checkbox visually-hidden"
+                id="services"
+              />
+            <label class="category-label" for="services">
+              
+              Послуги
+            </label>
+          </form>
+        </div>
+
+        <div class="shops-section">
+
+            <!-- pdsl -->
+          <h1 class="mall-title">spartak</h1>
+          <div class="shop-category-wrap">
+            <h2 class="shop-title">Магазини</h2>
+            <h3 class="category-title">Спортивні товари</h3>
+            <div class="items-wrap">
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/puma-logo-png-1.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">Puma</p>
+                  <span class="other-tags"
+                    >Інші теги: Одяг та взуття, Аксесуари
+                  </span>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/Adidas_Logo.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">Adidas</p>
+                  <span class="other-tags"
+                    >Інші теги: Одяг та взуття, Аксесуари
+                  </span>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/new-balance.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">New balance</p>
+                  <span class="other-tags"
+                    >Інші теги: Одяг та взуття, Аксесуари
+                  </span>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/Logo_arena.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">Arena</p>
+                  <span class="other-tags"
+                    >Інші теги: Одяг та взуття, Аксесуари
+                  </span>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/Marathon_blue_logo.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">Marathon</p>
+                  <span class="other-tags"
+                    >Інші теги: Одяг та взуття, Аксесуари
+                  </span>
+                </div>
+              </div>
+            </div>
+            <h3 class="category-title">Товари для тварин</h3>
+            <div class="items-wrap">
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/master-zoo.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">Master zoo</p>
+                  <span class="other-tags">Інші теги: - </span>
+                </div>
+              </div>
+            </div>
+            <h3 class="category-title">Товари для дітей</h3>
+            <div class="items-wrap">
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/antoshka.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">антошка</p>
+                  <span class="other-tags"> Інші теги: Одяг та взуття </span>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/avtokrisla.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">avtokrisla</p>
+                  <span class="other-tags"> Інші теги: - </span>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/dunalogoslogan.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">duna</p>
+                  <span class="other-tags">
+                    Інші теги: Спідня білизна Аксесуари, Товари для дому
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="shop-title">Кафе та ресторани</h2>
+            <h3 class="category-title">Бургерна</h3>
+            <div class="items-wrap">
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/SnackBurgers.jpg"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">Snack & Burgers</p>
+                  <span class="other-tags">
+                    Інші теги: Морозиво/йогуртерія, Американська кухня, Доставка
+                  </span>
+                </div>
+              </div>
+
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/the-myaso.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">The М'ясо</p>
+                  <span class="other-tags">
+                    Інші теги: Американська кухня, Українська кухня, Доставка
+                  </span>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/avocado_logo.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">avocado</p>
+                  <span class="other-tags">
+                    Інші теги: Здорове харчування, Європейська кухня, Доставка
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="category-title">Азійська кухня</h3>
+            <div class="items-wrap">
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/la_famiglia.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">la famiglia</p>
+                  <span class="other-tags">
+                    Інші теги: Піцерія, Європейська кухня, Доставка
+                  </span>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/noa_logo.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">noa</p>
+                  <span class="other-tags">
+                    Інші теги: Здорове харчування, Доставка
+                  </span>
+                </div>
+              </div>
+            </div>
+            <h3 class="category-title">Доставка</h3>
+
+            <div class="items-wrap">
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/SnackBurgers.jpg"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">Snack & Burgers</p>
+                  <span class="other-tags">
+                    Інші теги: Морозиво/йогуртерія, Американська кухня, Доставка
+                  </span>
+                </div>
+              </div>
+
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/the-myaso.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">The М'ясо</p>
+                  <span class="other-tags">
+                    Інші теги: Американська кухня, Українська кухня, Доставка
+                  </span>
+                </div>
+              </div>
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/noa_logo.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">noa</p>
+                  <span class="other-tags">
+                    Інші теги: Здорове харчування, Доставка
+                  </span>
+                </div>
+              </div>
+
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/tomatina.jpg"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">tomatina</p>
+                  <span class="other-tags">
+                    Інші теги: Здорове харчування, Європейська кухня
+                  </span>
+                </div>
+              </div>
+
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/avocado_logo.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">avocado</p>
+                  <span class="other-tags">
+                    Інші теги: Здорове харчування, Європейська кухня, Бургерна
+                  </span>
+                </div>
+              </div>
+
+
+              <div class="shop-item">
+                <div class="image-wrap">
+                  <img
+                    src="./images/la_famiglia.png"
+                    alt="shop-icon"
+                    width="65"
+                    height="65"
+                  />
+                </div>
+                <div class="shop-text">
+                  <p class="shop-name">la famiglia</p>
+                  <span class="other-tags">
+                    Інші теги: Піцерія, Європейська кухня, Доставка
+                  </span>
+                </div>
+              </div>
+              
+            </div>
+            
+          
+
+        
+            <h2 class="shop-title">Розваги та послуги</h2>
+            <h3 class="category-title">Кінотеатр</h3>
+            <div class="items-wrap">
+                <div class="shop-item">
+                    <div class="image-wrap">
+                      <img
+                        src="./images/Multiplex_logo.svg.png"
+                        alt="shop-icon"
+                        width="65"
+                        height="65"
+                      />
+                    </div>
+                    <div class="shop-text">
+                      <p class="shop-name">multiplex</p>
+                      <span class="other-tags">
+                        Інші теги: Усі розваги та послуги
+                      </span>
+                    </div>
+                  </div>
+            </div>
+            <h3 class="category-title">Поштове відділення</h3>
+            <div class="items-wrap">
+                <div class="shop-item">
+                    <div class="image-wrap">
+                      <img
+                        src="./images/nova_poshta.jpg"
+                        alt="shop-icon"
+                        width="65"
+                        height="65"
+                      />
+                    </div>
+                    <div class="shop-text">
+                      <p class="shop-name">Нова пошта</p>
+                      <span class="other-tags">
+                        Інші теги:  Усі розваги та послуги
+                      </span>
+                    </div>
+                  </div>
+            </div>
+          
+        </div>
+
+        <h1 class="mall-title">forum lviv</h1>
+        <div class="shop-category-wrap">
+            <h2 class="shop-title">Магазини</h2>
+            <h3 class="category-title">Спортивні товари</h3>
+            <div class="items-wrap">
+                <!-- тут будуть  shop-item Форума -->
+            </div>
+        </div>
+        <!-- gfojp -->
+      </section>
+    </main>
+    <footer>
+        <h3 class="footer-title">Дякуємо, що користуєтеся нашим сервісом!</h3>
+        <div class="footer-wrap">
+            <p class="footer-paragraph">Більше інформації про ТРЦ можете знайти за посиланнями на офіційні веб-сайти</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="white" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            <div class="mall-links">
+                <div class="footer-mall-item">
+                    <p class="mall-name">Victoria Gardens:</p>
+                    <a href="https://victoriagardens.com.ua/" class="mall-link">https://victoriagardens.com.ua/</a>
+                </div>
+                <div class="footer-mall-item">
+                    <p class="mall-name">King Cross Leopolis:</p>
+                    <a href="https://www.kingcross.com.ua/" class="mall-link">https://www.kingcross.com.ua/</a>
+                </div>
+                <div class="footer-mall-item">
+                    <p class="mall-name">Spartak:</p>
+                    <a href="https://spartak.city/" class="mall-link">https://spartak.city/</a>
+                </div>
+                <div class="footer-mall-item">
+                    <p class="mall-name">Forum Lviv: </p>
+                    <a href="https://forumlviv.com/" class="mall-link">https://forumlviv.com/</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
