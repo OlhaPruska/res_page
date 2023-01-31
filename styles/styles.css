@@ -32,7 +32,7 @@ body {
   margin: 0;
   /* font-family: 'MacPaw Fixel Display'; */
   background-color: var(--background-color);
-  width: 360px;
+  /* width: 360px; */
   font-family: 'FixelText-Regular', sans-serif;
 }
 p,
@@ -62,19 +62,28 @@ button {
 }
 
 header {
-  position: relative;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 2;
+  background-color: var(--background-color);
+  top: 0;
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 5px 12px 4px;
+  width: 100%;
+ border-bottom: 1px solid var(--accent-color);
+}
+main {
+  margin-top: 21px;
 }
 .bi-arrow-90deg-left {
   position: absolute;
-  left: 18px;
+  left: 8px;
 }
 .go-to-main-btn {
-  width: 101px;
+  display: flex;
+  /* width: 101px; */
   background-color: transparent;
   border: none;
   font-style: normal;
@@ -84,10 +93,14 @@ header {
   line-height: 8px;
   color: #000000;
 }
+.header-search-form {
+  display: flex;
+  position: relative;
+}
 .bi-search {
   position: absolute;
-  left: 260px;
-  top: 7px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .logo {
   font-style: normal;
@@ -97,6 +110,7 @@ header {
   line-height: 11px;
   /* identical to box height */
   color: #000000;
+  
 }
 .logo::after {
   content: "";
@@ -107,7 +121,8 @@ header {
   background-color: var(--accent-color);
   z-index: -1;
   top: 11px;
-  left: 150px;
+  left: 50%;
+  transform: translateX(-20%);
 }
 
 .search-input {
@@ -225,7 +240,7 @@ header {
   display: flex;
   position: relative;
 }
-form {
+.check-form {
   display: flex;
   flex-wrap: wrap;
   margin-left: 18px;
